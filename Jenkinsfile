@@ -14,7 +14,7 @@ pipeline {
 
         stage('Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/satishchippa-bob/FullStack-Blogging-App.git'
+                git branch: 'main', url: 'https://github.com/shreyaalwal/FullStack-Blogging-App.git'
             }
         }
 
