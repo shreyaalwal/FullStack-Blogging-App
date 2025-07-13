@@ -141,7 +141,7 @@ pipeline {
                 emailext(
                     subject: "Jenkins Job: ${env.JOB_NAME} #${env.BUILD_NUMBER} - ${pipelineStatus}",
                     body: body,
-                    to: 'snehalatabarenkal2004@gmail.com ',
+                    to: 'shripadyadiri@gmail.com ',
                     from: 'shreyaalwal@gmail.com',
                     replyTo: 'shreyaalwal@gmail.com',
                     mimeType: 'text/html'
