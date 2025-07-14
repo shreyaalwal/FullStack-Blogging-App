@@ -58,8 +58,8 @@ pipeline {
                     def tag = "${env.BUILD_NUMBER}"
                     withDockerRegistry(credentialsId: 'dockerhub', toolName: 'docker') {
                         sh """
-                            docker build -t satishchippabob/blogging-apps:${tag} .
-                            docker tag satishchippabob/blogging-apps:${tag} satishchippabob/blogging-apps:latest
+                            docker build -t shreya500/blogging-apps:${tag} .
+                            docker tag shreya500/blogging-apps:${tag} shreya500/blogging-apps:latest
                         """
                     }
                 }
@@ -68,7 +68,7 @@ pipeline {
 
         stage('Scan Docker Image by Trivy') {
             steps {
-                sh 'trivy image --format table -o image-report.html satishchippabob/blogging-apps:latest'
+                sh 'trivy image --format table -o image-report.html shreya500/blogging-apps:latest'
             }
         }
 
@@ -78,8 +78,8 @@ pipeline {
                     def tag = "${env.BUILD_NUMBER}"
                     withDockerRegistry(credentialsId: 'dockerhub', toolName: 'docker') {
                         sh """
-                            docker push satishchippabob/blogging-apps:${tag}
-                            docker push satishchippabob/blogging-apps:latest
+                            docker push shreya500/blogging-apps:${tag}
+                            docker push shreya500/blogging-apps:latest
                         """
                     }
                 }
