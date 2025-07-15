@@ -94,7 +94,7 @@ pipeline {
                     contextName: '', 
                     credentialsId: 'k8_cred', 
                     namespace: 'webapps', 
-                    serverUrl: 'https://9027C37977DB8330DFD1625EC1104897.yl4.us-west-2.eks.amazonaws.com'
+                    serverUrl: 'https://8ECE2708D72D2CEE56E78A18D9033288.gr7.us-west-2.eks.amazonaws.com'
                 ]]) {
                     sh 'kubectl apply -f deployment-service.yml'
                 }
@@ -109,7 +109,7 @@ pipeline {
                     contextName: '', 
                     credentialsId: 'k8_cred', 
                     namespace: 'webapps', 
-                    serverUrl: 'https://9027C37977DB8330DFD1625EC1104897.yl4.us-west-2.eks.amazonaws.com'
+                    serverUrl: 'https://8ECE2708D72D2CEE56E78A18D9033288.gr7.us-west-2.eks.amazonaws.com'
                 ]]) {
                     sh 'kubectl get pods'
                     sh 'kubectl get svc'
@@ -141,7 +141,7 @@ pipeline {
                 emailext(
                     subject: "Jenkins Job: ${env.JOB_NAME} #${env.BUILD_NUMBER} - ${pipelineStatus}",
                     body: body,
-                    to: 'snehalatabarenkal2004@gmail.com ',
+                    to: 'alwalvyankatesh@gmail.com ',
                     from: 'shreyaalwal@gmail.com',
                     replyTo: 'shreyaalwal@gmail.com',
                     mimeType: 'text/html'
