@@ -10,8 +10,8 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>twitter-app</artifactId>
-	<version>0.0.3</version>
-	<name>twitter-app</name>
+	<version>1.0.0</version>
+        <name>twitter-app</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses> 
